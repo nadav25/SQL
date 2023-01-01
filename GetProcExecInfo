@@ -1,0 +1,14 @@
+
+
+
+SELECT top(10) * 
+    --obj.name AS ProcedureName,
+    --last_execution_time
+FROM sys.dm_exec_procedure_stats AS st
+INNER JOIN sys.objects AS obj ON st.object_id = obj.object_id
+WHERE obj.name = 'PROC_NAME'
+AND obj.type = 'P'
+
+
+
+
